@@ -1,0 +1,20 @@
+[package]
+name = "ffi_wasm_wevote"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "ffi_wasm_wevote"
+crate-type = ["rlib", "cdylib"]
+
+[dependencies]
+curve25519-dalek = { version = "3", features = [ "serde", "nightly" ] }
+wasm-bindgen = "0.2"
+getrandom = { version = "0.2", features = ["js"] }
+wedpr_l_utils = "1.1.0"
+
+# [profile.release]
+# lto = true
+# opt-level = 'z'
